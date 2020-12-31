@@ -247,7 +247,7 @@ module.exports = {
                         console.log("balance verification");
                         if (transaction_vector.wallet[j].balance < (transaction.amount + transaction.fee))
                         {
-                            return response.json({ status: "It already exists a transaction in this wallet not included in the blockchain", response: transaction_vector.vector});
+                            return response.json({ status: "Not sufficient balance on wallet", response: transaction_vector.vector});
                         }else{
                             saldo_atualizado_carteira_atual = true;
                             transaction_vector.wallet[j].balance -= transaction.amount + transaction.fee;
@@ -261,6 +261,7 @@ module.exports = {
         for (var index=0; index < transaction_vector.vector.length; index++){
             if (transaction_vector.vector[index].id == transaction.id){
                 existe = true;
+                return response.json({ status: "This transaction was already included", response: transaction_vector.vector});
             }
         }
 
@@ -268,7 +269,7 @@ module.exports = {
             if ((transaction.amount + transaction.fee) <= balance.data[0].balance){
                 transaction_vector.vector.push(transaction);
             }else{
-                return response.json({ status: "Wallet balance below of transaction amount + fee", response: transaction});
+                return response.json({ status: "Wallet balance below of transaction amount", response: transaction});
             }
         }
 

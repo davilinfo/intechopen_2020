@@ -18,13 +18,7 @@ server.listen(3333);
 console.log("Initiated...");
 
 var interval = setInterval(function (){
-    console.log('vector length:'.concat(transaction_vector.vector.length));
-    console.log('foods offered by restaurant:');
-    if (transaction_vector.foods.length > 0){
-        for (var index= 0; index < transaction_vector.foods; index ++){
-            console.log(transaction_vector.foods[index]);
-        }
-    }
+    console.log('vector length:'.concat(transaction_vector.vector.length));    
     if (transaction_vector.vector.length > 500){
         transaction_vector.vector = [];
         transaction_vector.wallet = [];
