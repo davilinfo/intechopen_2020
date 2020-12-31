@@ -1,0 +1,42 @@
+{ 
+    "time": 60000,
+    "maxwaittime": 15000,
+    "hosts": [    
+    {
+        "host" : "ec2-3-18-101-112.us-east-2.compute.amazonaws.com",
+        "port" : "7000",
+        "consensus": 0,
+        "publicKey": "614e572997ab1316932bb90d112cd445f91acd611c3d673a607b9642f555449d",
+        "forging": false,
+        "online": false,
+        "gatewayport": 10000
+    },   
+    {
+        "host" : "ec2-18-223-188-61.us-east-2.compute.amazonaws.com",
+        "port" : "7000",
+        "consensus": 0,
+        "publicKey": "614e572997ab1316932bb90d112cd445f91acd611c3d673a607b9642f555449d",
+        "forging": false,
+        "online": false,
+        "gatewayport": 10000
+    },
+    {
+        "host" : "ec2-18-191-154-52.us-east-2.compute.amazonaws.com",
+        "port" : "7000",
+        "consensus": 0,
+        "publicKey": "614e572997ab1316932bb90d112cd445f91acd611c3d673a607b9642f555449d",
+        "forging": false,
+        "online": false,
+        "gatewayport": 10000
+    },
+    {
+        "host" : "172.18.90.83",
+        "port" : "7500",
+        "consensus": 0,
+        "publicKey": "614e572997ab1316932bb90d112cd445f91acd611c3d673a607b9642f555449d",
+        "forging": false,
+        "online": false,
+        "gatewayport": 10000
+    }  
+    ]
+}
