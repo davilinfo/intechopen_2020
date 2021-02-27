@@ -11,8 +11,8 @@ sudo apt install -y libtool automake autoconf curl build-essential python-minima
 
 /*if you don't have docker installed yet*/
 sudo apt-get install docker.io
-/*setup a postgres instance for lisk db running on port 5435*/
-sudo docker run --name restaurant_sidechain -p5435:5432 -e POSTGRES_USER=lisk -e POSTGRES_PASSWORD=lisk -e POSTGRES_DB=lisk_dev -d postgres:10
+/*setup a postgres instance for lisk db running on port 5432*/
+sudo docker run --name restaurant_sidechain -p5432:5432 -e POSTGRES_USER=lisk -e POSTGRES_PASSWORD=lisk -e POSTGRES_DB=lisk_dev -d postgres:10
 
 /*create a lisk user and login into it*/
 sudo adduser lisk
