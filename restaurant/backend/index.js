@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const http = require('http');
 const routes = require('./routes/routes');
-const transaction_vector = require('../models/transaction_vector');
+const transaction_vector = require('./models/transaction_vector');
 
 const app = express();
 const server= http.Server(app);
