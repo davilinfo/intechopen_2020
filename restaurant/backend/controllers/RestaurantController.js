@@ -245,12 +245,12 @@ module.exports = {
                 for (var j = 0; j < transaction_vector.wallet.length; j ++){
                     if (transaction_vector.wallet[j].senderId == transaction.senderId){
                         console.log("balance verification");
-                        if (transaction_vector.wallet[j].balance < (transaction.amount + transaction.fee))
+                        if (transaction_vector.wallet[j].balance < ((parseFloat(transaction.amount) + parseFloat(transaction.fee))))
                         {
                             return response.json({ status: "Not sufficient balance on wallet", response: transaction_vector.vector});
                         }else{
                             saldo_atualizado_carteira_atual = true;
-                            transaction_vector.wallet[j].balance -= transaction.amount + transaction.fee;
+                            transaction_vector.wallet[j].balance -= (parseFloat(transaction.amount) + parseFloat(transaction.fee));
                         }
                     }
                 }
@@ -266,7 +266,7 @@ module.exports = {
         }
 
         if (existe == false){
-            if ((transaction.amount + transaction.fee) <= balance.data[0].balance){
+            if ((parseFloat(transaction.amount) + parseFloat(transaction.fee)) <= balance.data[0].balance){
                 transaction_vector.vector.push(transaction);
             }else{
                 return response.json({ status: "Wallet balance below of transaction amount", response: transaction});

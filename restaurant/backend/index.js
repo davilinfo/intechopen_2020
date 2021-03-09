@@ -1,10 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
+//const https = require('https');
 const routes = require('./routes/routes');
 const transaction_vector = require('./models/transaction_vector');
 
 const app = express();
+/*const options = {
+    key: fs.readFileSync('/etc/letsencrypt/live/www.liskrestaurant.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/www.liskrestaurant.com/fullchain.pem')
+}
+const server= https.createServer(options,app);*/
 const server= http.Server(app);
 
 app.use(cors());
