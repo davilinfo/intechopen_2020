@@ -5,7 +5,7 @@ Restaurants can take advantage of RestaurantFood class and specify its restauran
 Configuring
 /*After configure the restaurant sidechain, now is time to configure the backend*/
 /*Run*/
-npm ci
+npm install
 
 /*open the config folder and configure the config.json file including the ip address(es) of restaurant sidechain*/
 
