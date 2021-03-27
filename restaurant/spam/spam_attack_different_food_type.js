@@ -6,7 +6,7 @@ const cryptography = require('@liskhq/lisk-cryptography');
 const FoodRequest = require("liskrestaurant_transactions");
 
 const api = axios.create({
-    baseURL : 'http://www.liskrestaurant.com:3333'
+    baseURL : 'https://www.liskrestaurant.com:3334'
 });
 
 const getTimestamp = () => {
@@ -23,6 +23,8 @@ const postTransaction = async (tx) => {
 const postResult = async (tx) =>{
     await postTransaction(tx);
 }
+
+setInterval(async function(){
 
 var passphrase = 'wagon stock borrow episode laundry kitten salute link globe zero feed marble';
 var address = "12155463429267245415L";
@@ -41,13 +43,13 @@ let tx = new FoodRequest({
         keynonce: 'not included',
         clientpublickey: cryptography.getAddressAndPublicKeyFromPassphrase(passphrase).publicKey
     },
-    amount: '999',
+    amount: '9',
     recipientId: address, //restaurant lisk address
-    timestamp: parseInt('145313864')
+    timestamp: getTimestamp()
 });
 
 tx.sign('wagon stock borrow episode laundry kitten salute link globe zero feed marble');
 
-setInterval(function(){
-    postResult(tx);
+
+    await postResult(tx);
 }, 100);

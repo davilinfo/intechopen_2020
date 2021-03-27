@@ -4,7 +4,7 @@ const { EPOCH_TIME } = require ("@liskhq/lisk-constants");
 const { exception } = require('console');
 
 const api = axios.create({
-    baseURL : 'http://www.liskrestaurant.com:3333'
+    baseURL : 'https://www.liskrestaurant.com:3334'
 });
 
 const getTimestamp = () => {
