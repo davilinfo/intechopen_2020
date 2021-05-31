@@ -10,9 +10,7 @@ function Header() {
             <li className="btn_1"><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
             <li className="line"></li>
             <li className="btn_2"><NavLink exact activeClassName="active" to="/History">Our History</NavLink></li>
-            <li className="line"></li>
-            <li className="btn_3"><NavLink exact activeClassName="active" to="/Menu">Menu</NavLink></li>      
-            <li className="line"></li>
+            <li className="line"></li>            
             <li className="btn_8"><NavLink exact activeClassName="active" to="/Refund">Refund</NavLink></li>
             <li className="line"></li>
             <li className="btn_7"><NavLink exact activeClassName="active" to="/Reservation">Reservations</NavLink></li>

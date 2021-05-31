@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const http = require('http');
 //const https = require('https');
+//const fs = require('fs')
 const routes = require('./routes/routes');
 const transaction_vector = require('./models/transaction_vector');
 
