@@ -18,7 +18,9 @@ running a dish command to include funds on account balance. Run the file balance
 
 node dish_commands/balance_request.js | tee >(curl -X POST -H "Content-Type: application/json" -d @- localhost:4030/api/transactions)
 
-/*this command will create a transfer transaction and broadcast it into node network. After confirmed, the account will have enough funds to create a menu from a restaurant*/
+/*this command will create a transfer transaction and broadcast it into node network. After confirmed, the account will have enough funds to create a menu from a restaurant.
+Wait 20 seconds and run the same command again
+*/
 
 /*Configuring new food type inside luxury restaurant
 running a dish command to include all the menu items of your restaurant from inside of restaurant_sidechains folder. Change the file menu_transaction_request.js properly and then run the following command from the restaurant_sidechain folder:*/ 
