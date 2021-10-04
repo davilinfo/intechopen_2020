@@ -1,3 +1,4 @@
+
 const transactions = require('@liskhq/lisk-transactions');
 const { EPOCH_TIME } = require ("@liskhq/lisk-constants");
 const { APIClient } = require('@liskhq/lisk-api-client');
@@ -11,13 +12,23 @@ const getTimestamp = () => {
 }
 
 var address = "12155463429267245415L";
-let tx = new transactions.TransferTransaction({    
+let tx = new transactions.TransferTransaction({
     amount: transactions.utils.convertLSKToBeddows('200000'),
     recipientId: address,
-    timestamp: getTimestamp()    
+    timestamp: getTimestamp()
 });
 
 tx.sign('wagon stock borrow episode laundry kitten salute link globe zero feed marble');
 
+var address2 = "6181773985994883123L";
+let tx2 = new transactions.TransferTransaction({
+    amount: transactions.utils.convertLSKToBeddows('200000'),
+    recipientId: address2,
+    timestamp: getTimestamp()
+});
+
+tx2.sign('wagon stock borrow episode laundry kitten salute link globe zero feed marble');
+
 console.log(tx.stringify());
+console.log(tx2.stringify());
 process.exit(0);
